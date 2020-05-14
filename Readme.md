@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Kseniya Efremova](https://up.htmlacademy.ru/htmlcss/28/user/1469483).
-* Наставник: `Неизвестно`.
+* Наставник: [Егор Дорош](https://htmlacademy.ru/profile/edorosh).
 
 ---
 
