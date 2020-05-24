@@ -24,30 +24,72 @@
     </header>
     <main>
         <section>
-            <form action="">
+            <form action="https://echo.htmlacademy.ru" method="get" oninput="cost_range.value=cost_range.value">
+                
                 <fieldset>
-                    <legend>Стоимость:</legend>
+                    <legend>Стоимость:</legend> <!-- не получается связать ползунок с output и не понятно, как развести значения по разным полям на "от" и "до"-->
                     <div>
-                        <label><input type="text" value="слайдер"></label>
+                        <div>                                       
+                            <input type="range" name="cost" id="cost" min="0" max="15000" step="any" value="10000">
+                            <input type="range" name="cost" id="cost" min="0" max="15000" step="any" value="10000">
+                        </div>
+                        <br>
+                        <div>
+                            <div>
+                                ОТ <input type="number" name="cost_min" id="cost_min" value="0">
+                            </div>
+                            <div>
+                                ДО <input type="number" name="cost_max" id="cost_max" value="15000">
+                            </div>
+                        </div> 
+                        <div>
+                            <output name="cost_range" for="cost cost_min cost_max"></output>
+                        </div>
                     </div>
-                    <div>
-                        <label>ОТ <input type="text" name="стоимость" value="ОТ"></label>
-                        <label>ДО <input type="text" name="стоимость" value="ДО"></label>
-                    </div>
-                </fieldset>               
-                <fieldset>
-                    <legend>Сетка:</legend>
-                    <label><input type="radio" name="Сетка" value="Адаптивная">Адаптивная</label>
-                    <label><input type="radio" name="Сетка" value="Фиксированная">Фиксированная</label>
-                    <label><input type="radio" name="Сетка" value="Резиновая">Резиновая</label>
                 </fieldset>
+                               
+                <fieldset>
+                    <legend>Сетка:</legend> <!-- почему-то radio в браузере отрабатывает как checkbox это глюк или ошибка где-то?-->
+                    <ul>
+                        <li>
+                            <input type="radio" name="grid_adaptiv" id="filter_adaptiv" value="adaptiv" checked>
+                            <label for="filter_adaptiv">Адаптивная</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="grid_fix" id="filter_fix" value="fix">
+                            <label for="filter_fix">Фиксированная</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="grid_rubber" id="filter_rubber" value="rubber">
+                            <label for="filter_rubber">Резиновая</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                
                 <fieldset>
                     <legend>Особенности:</legend>
-                    <label><input type="checkbox" name="Особенности" value="Слайдер">Слайдер</label>
-                    <label><input type="checkbox" name="Особенности" value="преимущества">Блок преимуществ</label>
-                    <label><input type="checkbox" name="Особенности" value="Новости">Новости</label>
-                    <label><input type="checkbox" name="Особенности" value="Галерея">Галерея</label>
-                    <label><input type="checkbox" name="Особенности" value="Корзина">Корзина</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="features_slider" value="slider" id="filter_slider" checked>
+                            <label for="filter_slider">Слайдер</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="features_advantages" value="advantages" id="filter_advantages">
+                            <label for="filter_advantages">Блок преимуществ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="features_news" value="news" id="filter_news" checked>
+                            <label for="filter_news">Новости</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="features_gallery" value="gallery" id="filter_gallery">
+                            <label id="filter_gallery">Галерея</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="features_basket" value="basket" id="filter_basket">
+                            <label for="filter_basket">Корзина</label>
+                        </li>
+                    </ul>
                 </fieldset>
                 <button type="submit">Показать</button>
             </form>
@@ -55,15 +97,35 @@
         <div>
             <p>Сортировать:</p>
             <ul>
-                <li>По цене</li>
-                <li>По типу</li>
-                <li>По названию</li>
-                <li>вниз</li>
-                <li>вверх</li>
+                <li>
+                    <a href="">
+                        <span>По цене</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>По типу</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>По названию</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>вниз</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>вверх</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <div>
-            <h2>каталог</h2>
+            <h2 class="visually-hidden">каталог</h2>
             <ul>                
                 <li>
                     <img src="img/catalog-pict-sedona.jpg" width="360" height="576" alt="Sedona">
@@ -116,13 +178,21 @@
             </ul>
         </div>
         <div>
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">Следующая</a>
+            <a href="">
+                <span>1</span>
+            </a>
+            <a href="">
+                <span>2</span>
+            </a>
+            <a href="">
+                <span>3</span>
+            </a>
+            <a href="">
+                <span>Следующая</span>
+            </a>
         </div>
-        <div id="map">
-            <img src="img/index-map.jpg" width="1440" height="416" alt="Карта, как найти NERDS">
+        <div id="map"> <!-- где почитать про попапы ?-->
+            <img src="img/index-map.jpg" width="1440" height="416" alt="Карта, как найти NERDS"> 
             <!--контакты, 
                 карта-->
         </div>
