@@ -25,68 +25,66 @@
     <main>
         <section>
             <form action="https://echo.htmlacademy.ru" method="get" oninput="cost_range.value=cost_range.value">
-                
                 <fieldset>
-                    <legend>Стоимость:</legend> <!-- не получается связать ползунок с output и не понятно, как развести значения по разным полям на "от" и "до"-->
+                    <legend>Стоимость:</legend>
                     <div>
-                        <div>                                       
-                            <input type="range" name="cost" id="cost" min="0" max="15000" step="any" value="10000">
-                            <input type="range" name="cost" id="cost" min="0" max="15000" step="any" value="10000">
+                        <div class="range-controls">
+                            <div class="scale">   <!--шкала--> 
+                                <div class="bar"></div> <!-- заполненная шкала --> 
+                            </div>
+                            <div class="switch switch-min"></div> <!-- переключатели --> 
+                            <div class="switch switch-max"></div>
                         </div>
-                        <br>
                         <div>
                             <div>
-                                ОТ <input type="number" name="cost_min" id="cost_min" value="0">
+                                <label for="cost_min">От</label>
+                                <input type="number" name="cost_min" id="cost_min" value="0">
                             </div>
                             <div>
-                                ДО <input type="number" name="cost_max" id="cost_max" value="15000">
+                                <label for="cost_max">До</label>
+                                <input type="number" name="cost_max" id="cost_max" value="15000">
                             </div>
-                        </div> 
-                        <div>
-                            <output name="cost_range" for="cost cost_min cost_max"></output>
-                        </div>
+                        </div>                        
                     </div>
-                </fieldset>
-                               
+                </fieldset>          
                 <fieldset>
-                    <legend>Сетка:</legend> <!-- почему-то radio в браузере отрабатывает как checkbox это глюк или ошибка где-то?-->
+                    <legend>Сетка:</legend>
                     <ul>
                         <li>
-                            <input type="radio" name="grid_adaptiv" id="filter_adaptiv" value="adaptiv" checked>
+                            <input type="radio" name="grid" id="filter_adaptiv" value="adaptiv" checked>
                             <label for="filter_adaptiv">Адаптивная</label>
                         </li>
                         <li>
-                            <input type="radio" name="grid_fix" id="filter_fix" value="fix">
+                            <input type="radio" name="grid" id="filter_fix" value="fix">
                             <label for="filter_fix">Фиксированная</label>
                         </li>
                         <li>
-                            <input type="radio" name="grid_rubber" id="filter_rubber" value="rubber">
+                            <input type="radio" name="grid" id="filter_rubber" value="rubber">
                             <label for="filter_rubber">Резиновая</label>
                         </li>
                     </ul>
-                </fieldset>
-                
+                </fieldset>   
                 <fieldset>
                     <legend>Особенности:</legend>
                     <ul>
                         <li>
-                            <input type="checkbox" name="features_slider" value="slider" id="filter_slider" checked>
+                            <input type="checkbox" name="features_slider" id="filter_slider" checked>
                             <label for="filter_slider">Слайдер</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="features_advantages" value="advantages" id="filter_advantages">
+                            <input type="checkbox" name="features_advantages" id="filter_advantages">
                             <label for="filter_advantages">Блок преимуществ</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="features_news" value="news" id="filter_news" checked>
+                            <input type="checkbox" name="features_news" id="filter_news" checked>
                             <label for="filter_news">Новости</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="features_gallery" value="gallery" id="filter_gallery">
+                            <input type="checkbox" name="features_gallery" id="filter_gallery">
                             <label id="filter_gallery">Галерея</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="features_basket" value="basket" id="filter_basket">
+                            <input type="checkbox" name="features_basket" id="filter_basket">
                             <label for="filter_basket">Корзина</label>
                         </li>
                     </ul>
@@ -191,11 +189,19 @@
                 <span>Следующая</span>
             </a>
         </div>
-        <div id="map"> <!-- где почитать про попапы ?-->
+        <section id="map">
             <img src="img/index-map.jpg" width="1440" height="416" alt="Карта, как найти NERDS"> 
-            <!--контакты, 
-                карта-->
-        </div>
+        </section>
+        <section class="visually-hidden">
+            <div>
+                <img src="img/index-map-marker.png" alt="Маркер Nёrds" width="231" height="190">
+            </div>
+            <div>
+                <p>Nёrds design studio</p>
+                <p>191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8  тел. +7 (812) 275-75-75</p>
+            </div>
+            <a href="">Напишите нам</a>
+        </section>
         </main>
         <footer>
             <div>
