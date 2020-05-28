@@ -1,0 +1,76 @@
+:root {
+--basic-color: #ffffff
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-width: 1440px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #283136;
+    font-weight: normal;
+    background-color: var(--basic-color);
+}
+
+a {
+    text-decoration: none;
+  }
+  
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.main-navigation a{
+    color: #000000;
+    background-color: var(--basic-color);
+    text-transform: uppercase;
+    font-size: 16px;   
+}
+
+.none-list-style {
+    list-style: none;
+}
+
+.slider-style-tagline {
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 55px;
+    
+}
+
+.slider-style-text {
+    font-size: 16px;
+    line-height: 24px;   
+}
+
+.slider-style-button-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.slider-style-button {
+    width: 240px;
+    height: 50px;
+    background: #FB565A;
+    border-radius: 3px;
+}
+
+.service-name {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.service-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
