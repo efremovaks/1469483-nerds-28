@@ -1,16 +1,19 @@
 :root {
---basic-color: #ffffff
+--basic-text-color: #000000;
+--basic-background-color: #ffffff;
 
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    min-width: 1440px;
+    min-width: 1160px;
     font-size: 16px;
     line-height: 24px;
     color: #283136;
     font-weight: normal;
-    background-color: var(--basic-color);
+    background-color: var(--basic-background-color);
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -22,42 +25,62 @@ img {
     height: auto;
   }
 
-.main-navigation a{
-    color: #000000;
-    background-color: var(--basic-color);
-    text-transform: uppercase;
-    font-size: 16px;   
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
 }
 
+.main-navigation {
+    color: #000000;
+    background-color: var(--basic-background-color);
+    text-transform: uppercase;
+    font-size: 16px;   
+    list-style: none;
+}
+
+/* и все же, не получается свовсем избавиться от глобального .none-list-style { list-style: none; }
+некоторые списки стилизуются внутри, минуя UL.
+подскажи рецепт, плиз */
 .none-list-style {
     list-style: none;
 }
 
-.slider-style-tagline {
+.slider-tagline {
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
-    
 }
 
-.slider-style-text {
+.slider-text {
     font-size: 16px;
     line-height: 24px;   
 }
 
-.slider-style-button-text {
+.slider-button {
+    display: block;
+    width: 240px;
+    height: 50px;
+    background: #FB565A;
+    border-style: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
     color: #FFFFFF;
-    text-transform: uppercase;
-}
-
-.slider-style-button {
-    width: 240px;
-    height: 50px;
-    background: #FB565A;
-    border-radius: 3px;
+    text-transform: uppercase;  
+    padding-left: 54px;
+    padding-top: 16px;
+    padding-right: 54px;
+    padding-bottom: 16px;
+    
 }
 
 .service-name {
@@ -66,11 +89,289 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     color: #000000;
+    list-style: none;
 }
 
 .service-text {
     font-size: 16px;
     line-height: 24px;
-    color: #000000;
+    color: #283136;
 }
 
+.red {
+    background-color: #FB565A;
+}
+
+.green {
+    background-color: #00CA74;
+}
+
+.yellow {
+    background-color: #EFC849;
+}
+
+.service-button,
+.red,
+.green,
+.yellow {
+    display: block;
+
+    width: 160px;
+    height: 50px;
+    border-style: none;
+    border-radius: 3px;
+    
+    width: 81px;
+    height: 18px;
+    
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-left: 39px;
+    padding-top: 17px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+}
+
+.about-tagline {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+    color: #000000;
+    background-color: var(--basic-background-color);
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #283136;
+}
+
+.about-orders {    
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #283136;
+}
+
+.about-list {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #283136;
+    list-style: none;
+}
+
+/*  как стилизуются LI? 
+
+.about-list li {
+    list-style-image: url(img/list-style-image-about.png);
+}
+*/
+
+.advantage-tagline {  
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.advantage-rate {
+    font-size: 45px;
+    line-height: 64px;
+    font-weight: bold;
+    list-style: none;
+
+}
+
+.advantage-text {
+    font-size: 16px;
+    line-height: 18px;
+    color: #283136;
+}
+
+.contact-name {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.contact-adress {
+    font-size: 16px;
+    line-height: 18px;
+    color: #666666;
+}
+
+.contact-button {                                                               
+    display: block;
+    width: 219px;
+    height: 50px;
+    background-color: #FB565A;
+    border-style: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-left: 44px;
+    padding-top: 17px;
+    padding-right: 44px;
+    padding-bottom: 15px;
+}
+
+.social-button li {
+    width: 81px;
+    height: 81px;
+    list-style: none;
+    background-color: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+    border-style: none;
+    border-radius: 50%;
+}
+.social-vk {
+    display: block;
+    padding-left: 27px;
+    padding-top: 33px;
+    padding-right: 28px;
+    padding-bottom: 33px;
+}
+
+.social-fb {
+    display: block;
+    padding-left: 35px;
+    padding-top: 31px;
+    padding-right: 34px;
+    padding-bottom: 28px;
+}
+
+.social-inst {
+    display: block;
+    padding: 30px;
+}
+
+.get-friends {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.get-friends-text {
+    font-size: 16px;
+    line-height: 22px;
+    color: #444444;
+}
+
+/* Catalog */
+
+.shop {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+}
+
+.filter-name {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.filter-points {
+    font-size: 16px;
+    line-height: 19px;
+    color: #283136;
+    list-style: none;
+}
+
+.show-button {
+    width: 260px;
+    height: 50px;
+    background-color: #EEEEEE;
+    border-style: none;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding-left: 88px;
+    padding-top: 17px;
+    padding-right: 89px;
+    padding-bottom: 15px;
+}
+
+.sorting {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    list-style: none;
+}
+
+.next-button-number-active {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.0001);
+    border: solid;
+    border-color: #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    padding-left: 20px;
+    padding-top: 17px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+
+
+}
+
+.next-button-number-gray {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #EEEEEE;
+    
+    box-sizing: border-box;
+    border-style: none;
+    border-radius: 3px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    padding-left: 20px;
+    padding-top: 17px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+
+}
+
+.next-button-number-next {
+    display: block;
+
+    width: 260px;
+    height: 50px;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 3px;
+    
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000000;
+    padding-left: 78px;
+    padding-top: 17px;
+    padding-right: 77px;
+    padding-bottom: 15px;
+
+}
