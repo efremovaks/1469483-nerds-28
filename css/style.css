@@ -18,12 +18,17 @@ body {
 
 a {
     text-decoration: none;
+    color: #000000;
   }
   
 img {
     max-width: 100%;
     height: auto;
   }
+
+.logo-hover:active {
+    opacity: 0.3;
+}  
 
 .visually-hidden {
 	position: absolute !important;
@@ -36,13 +41,25 @@ img {
 	overflow: hidden;
 }
 
-.main-navigation {
+.main-navigation,
+ul.main-navigation li a{
     color: #000000;
     background-color: var(--basic-background-color);
     text-transform: uppercase;
     font-size: 16px;   
     list-style: none;
 }
+
+.main-navigation:hover,
+ul.main-navigation li a:hover{
+    color: #FB565A;
+} 
+
+.main-navigation:active,
+ul.main-navigation li a:active {
+    color: #000000;
+}
+
 
 /* и все же, не получается свовсем избавиться от глобального .none-list-style { list-style: none; }
 некоторые списки стилизуются внутри, минуя UL.
@@ -66,7 +83,7 @@ img {
     display: block;
     width: 240px;
     height: 50px;
-    background: #FB565A;
+    background-color: #FB565A;
     border-style: none;
     border-radius: 3px;
     box-sizing: border-box;
@@ -80,8 +97,25 @@ img {
     padding-top: 16px;
     padding-right: 54px;
     padding-bottom: 16px;
-    
 }
+
+/* Buttons live*/
+
+.slider-button:hover,
+.contact-button:hover,
+.red:hover,
+ul.price-button li a:hover {
+    background-color: #E74246;
+}
+
+.slider-button:active,
+.contact-button:active,
+.red:active,
+ul.price-button li a:active {
+    background-color: #D7373B;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
 
 .service-name {
     font-size: 24px;
@@ -106,8 +140,25 @@ img {
     background-color: #00CA74;
 }
 
+.green:hover {
+    background-color: #00BC6C;
+}
+
+.green:active {
+    background-color: #00AA62;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
 .yellow {
-    background-color: #EFC849;
+    background-color: #EFC84A;
+}
+
+.yellow:hover {
+    background-color: #EAB534;
+}
+.yellow:active {
+    background-color: #E5A722;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .service-button,
@@ -123,7 +174,7 @@ img {
     
     width: 81px;
     height: 18px;
-    
+
     font-size: 16px;
     font-weight: 500;
     color: #FFFFFF;
@@ -132,6 +183,19 @@ img {
     padding-top: 17px;
     padding-right: 40px;
     padding-bottom: 15px;
+}
+
+.clients-condition {
+    opacity: 0.2;
+}
+
+ul.clients-condition li a:hover { /*Почему это не работает?*/
+    opacity: 1;
+}
+
+
+ul.clients-condition li a:active {
+    opacity: 0.1;
 }
 
 .about-tagline {
@@ -165,12 +229,12 @@ img {
     list-style: none;
 }
 
-/*  как стилизуются LI? 
+/*  как стилизуются LI? */
 
-.about-list li {
+ul.about-list li {
     list-style-image: url(img/list-style-image-about.png);
 }
-*/
+
 
 .advantage-tagline {  
     font-size: 16px;
@@ -184,7 +248,6 @@ img {
     line-height: 64px;
     font-weight: bold;
     list-style: none;
-
 }
 
 .advantage-text {
@@ -225,14 +288,25 @@ img {
     padding-bottom: 15px;
 }
 
-.social-button li {
+
+.social-button li{
     width: 81px;
     height: 81px;
     list-style: none;
-    background-color: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+    background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
     border-style: none;
     border-radius: 50%;
 }
+
+.social-button li:hover {
+    background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
+}
+
+.social-button li:active{
+    background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
 .social-vk {
     display: block;
     padding-left: 27px;
@@ -281,13 +355,19 @@ img {
     text-transform: uppercase;
 }
 
-.filter-points {
+ul.filter-points li {
     font-size: 16px;
     line-height: 19px;
     color: #283136;
     list-style: none;
+    opacity: 0.4;
 }
 
+ul.filter-points li:hover {
+    opacity: 1;
+}
+
+/* не получается убрать у кнопки (button) рамку при нажатии, border-style: none; и border: none; не помогают*/
 .show-button {
     width: 260px;
     height: 50px;
@@ -304,74 +384,119 @@ img {
     padding-bottom: 15px;
 }
 
-.sorting {
+ul.sorting li {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
     color: #000000;
     list-style: none;
+    opacity: 0.3;
 }
 
-.next-button-number-active {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.0001);
-    border: solid;
-    border-color: #DBDBDB;
-    box-sizing: border-box;
-    border-radius: 3px;
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-
-    padding-left: 20px;
-    padding-top: 17px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-
-
+ul.sorting li:hover{
+    opacity: 0.6;
 }
 
-.next-button-number-gray {
+ul.sorting li:active {
+    opacity: 1;
+}
+
+.next-button a {
     display: block;
-    width: 50px;
-    height: 50px;
     background-color: #EEEEEE;
-    
     box-sizing: border-box;
     border-style: none;
     border-radius: 3px;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
+    color: black;
+}
 
+.next-button-number a {
+    width: 50px;
+    height: 50px;
     padding-left: 20px;
     padding-top: 17px;
     padding-right: 20px;
     padding-bottom: 15px;
-
 }
 
 .next-button-number-next {
-    display: block;
-
     width: 260px;
     height: 50px;
-    background-color: #EEEEEE;
-    box-sizing: border-box;
-    border-radius: 3px;
-    
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
     text-transform: uppercase;
-    color: #000000;
     padding-left: 78px;
     padding-top: 17px;
     padding-right: 77px;
     padding-bottom: 15px;
+}
 
+.next-button a:hover,
+.show-button:hover {
+    background-color: #DFDFDF;
+}
+
+.next-button a:active,
+.show-button:active {
+    background: #D5D5D5;
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    
+}
+
+/* не знаю как оформить и применить активную кнопку, наверное через псевдоклассы, но какие и как?*/
+
+.next-button-active {
+    background: rgba(0, 0, 0, 0.0001);
+    border: 3px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+ul.price-button li a{
+    width: 200px;
+    height: 50px;
+    background-color: #FB565A;
+    border-style: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding-left: 72px;
+    padding-top: 17px;
+    padding-right: 72px;
+    padding-bottom: 15px;
+}
+
+ul.makets-name li h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    padding-left: 145px;
+    padding-top: 26px;
+    padding-right: 144px;
+    padding-bottom: 175px;
+}
+
+ul.makets-description li span {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    padding-left: 68px;
+    padding-top: 26px;
+    padding-right: 53px;
+    padding-bottom: 126px;
+
+}
+
+ul.makets-box li{
+    width: 360px;
+    height: 231px;
+    background-color: #EEEEEE;
 }
