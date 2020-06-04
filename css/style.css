@@ -26,7 +26,11 @@ img {
     height: auto;
   }
 
-.logo-hover:active {
+.logo:hover {
+    cursor: pointer;
+}
+
+.logo:active {
     opacity: 0.3;
 }  
 
@@ -42,7 +46,7 @@ img {
 }
 
 .main-navigation,
-ul.main-navigation li a{
+.basket {
     color: #000000;
     background-color: var(--basic-background-color);
     text-transform: uppercase;
@@ -50,22 +54,21 @@ ul.main-navigation li a{
     list-style: none;
 }
 
-.main-navigation:hover,
-ul.main-navigation li a:hover{
+.main-navigation a:hover,
+.basket:hover {
     color: #FB565A;
+    
 } 
 
-.main-navigation:active,
-ul.main-navigation li a:active {
+.main-navigation a:active,
+.basket:active {
     color: #000000;
+    opacity: 0.3;
 }
 
-
-/* и все же, не получается свовсем избавиться от глобального .none-list-style { list-style: none; }
-некоторые списки стилизуются внутри, минуя UL.
-подскажи рецепт, плиз */
-.none-list-style {
+.slider {
     list-style: none;
+    color: black;
 }
 
 .slider-tagline {
@@ -79,7 +82,7 @@ ul.main-navigation li a:active {
     line-height: 24px;   
 }
 
-.slider-button {
+.slider-button {    
     display: block;
     width: 240px;
     height: 50px;
@@ -99,23 +102,25 @@ ul.main-navigation li a:active {
     padding-bottom: 16px;
 }
 
+/* не получается приглушить текст конопки при нажатии, 
+    отдельным классов выносила для текста, но мутнеет вся кнопка при нажатии, 
+    и вешать его некуда, на тот же тег, наверное из-за этого и не выходит*/
+
 /* Buttons live*/
 
-.slider-button:hover,
-.contact-button:hover,
-.red:hover,
-ul.price-button li a:hover {
+.btn:hover{
     background-color: #E74246;
 }
 
-.slider-button:active,
-.contact-button:active,
-.red:active,
-ul.price-button li a:active {
+.btn:active{
     background-color: #D7373B;
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
+.services {
+    list-style: none;
+    color: black;
+}
 
 .service-name {
     font-size: 24px;
@@ -185,16 +190,19 @@ ul.price-button li a:active {
     padding-bottom: 15px;
 }
 
+.clients {
+    list-style: none;
+}
+
 .clients-condition {
     opacity: 0.2;
 }
 
-ul.clients-condition li a:hover { /*Почему это не работает?*/
+.clients-condition:hover {
     opacity: 1;
 }
 
-
-ul.clients-condition li a:active {
+.clients-condition:active {
     opacity: 0.1;
 }
 
@@ -229,12 +237,11 @@ ul.clients-condition li a:active {
     list-style: none;
 }
 
-/*  как стилизуются LI? */
 
-ul.about-list li {
-    list-style-image: url(img/list-style-image-about.png);
+.advantage {
+    list-style: none;
+    color: black;
 }
-
 
 .advantage-tagline {  
     font-size: 16px;
@@ -328,6 +335,12 @@ ul.about-list li {
     padding: 30px;
 }
 
+.social-vk:active,
+.social-fb:active,
+.social-inst:active {
+    opacity: 0.3;
+}
+
 .get-friends {
     font-size: 36px;
     line-height: 36px;
@@ -355,7 +368,7 @@ ul.about-list li {
     text-transform: uppercase;
 }
 
-ul.filter-points li {
+.filter-points li {
     font-size: 16px;
     line-height: 19px;
     color: #283136;
@@ -363,11 +376,10 @@ ul.filter-points li {
     opacity: 0.4;
 }
 
-ul.filter-points li:hover {
+.filter-points li:hover {
     opacity: 1;
 }
 
-/* не получается убрать у кнопки (button) рамку при нажатии, border-style: none; и border: none; не помогают*/
 .show-button {
     width: 260px;
     height: 50px;
@@ -382,9 +394,11 @@ ul.filter-points li:hover {
     padding-top: 17px;
     padding-right: 89px;
     padding-bottom: 15px;
+    outline: none;
+
 }
 
-ul.sorting li {
+.sorting li {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -393,11 +407,11 @@ ul.sorting li {
     opacity: 0.3;
 }
 
-ul.sorting li:hover{
+.sorting li:hover{
     opacity: 0.6;
 }
 
-ul.sorting li:active {
+.sorting li:active {
     opacity: 1;
 }
 
@@ -441,19 +455,54 @@ ul.sorting li:active {
 .show-button:active {
     background: #D5D5D5;
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+
     
 }
 
 /* не знаю как оформить и применить активную кнопку, наверное через псевдоклассы, но какие и как?*/
 
-.next-button-active {
+.next-button-selected {
     background: rgba(0, 0, 0, 0.0001);
     border: 3px solid #DBDBDB;
     box-sizing: border-box;
     border-radius: 3px;
 }
 
-ul.price-button li a{
+.makets {
+    list-style: none;
+}
+
+.makets-name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    padding-left: 145px;
+    padding-top: 26px;
+    padding-right: 144px;
+    padding-bottom: 175px;
+}
+
+.makets-description {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    padding-left: 68px;
+    padding-top: 26px;
+    padding-right: 53px;
+    padding-bottom: 126px;
+
+}
+
+.makets-box {
+    width: 360px;
+    height: 231px;
+    background-color: #EEEEEE;
+}
+
+.price-button{
     width: 200px;
     height: 50px;
     background-color: #FB565A;
@@ -469,34 +518,4 @@ ul.price-button li a{
     padding-top: 17px;
     padding-right: 72px;
     padding-bottom: 15px;
-}
-
-ul.makets-name li h3 {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 30px;
-    text-transform: uppercase;
-
-    padding-left: 145px;
-    padding-top: 26px;
-    padding-right: 144px;
-    padding-bottom: 175px;
-}
-
-ul.makets-description li span {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-
-    padding-left: 68px;
-    padding-top: 26px;
-    padding-right: 53px;
-    padding-bottom: 126px;
-
-}
-
-ul.makets-box li{
-    width: 360px;
-    height: 231px;
-    background-color: #EEEEEE;
 }

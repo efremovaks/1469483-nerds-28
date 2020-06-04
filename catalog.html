@@ -11,7 +11,7 @@
     <header>
         <div>
             <a href="index.html">
-                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс" class="logo-hover">
+                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс" class="logo">
             </a>
         </div>
         <nav>
@@ -37,7 +37,7 @@
               <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="#A6A6A6"/>
               <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="#A6A6A6"/>
             </svg>
-            <span class="main-navigation">Корзина</span>
+            <span class="basket">Корзина</span>
           </a>
         </div>
         <H1 class="shop">Магазин готовых шаблонов</H1>
@@ -144,61 +144,61 @@
         </div>
         <div>
             <h2 class="visually-hidden">каталог</h2>
-            <ul class="makets-box makets-name makets-description price-button">                
+            <ul class="makets">                
                 <li>
-                    <<img src="img/catalog-pict-sedona.jpg" width="360" height="576" alt="Sedona">
-                    <div>
-                        <h3>Sedona</h3>
-                        <span>Информационный сайт<br>для туристов</span> 
-                        <a href="">9 900 ₽</a>
+                    <img src="img/catalog-pict-sedona.jpg" width="360" height="576" alt="Sedona">
+                    <div class="makets-box">
+                        <h3 class="makets-name">Sedona</h3>
+                        <span class="makets-description">Информационный сайт<br>для туристов</span> 
+                        <a href="" class="price-button btn">9 900 ₽</a>
                     </div>
                 </li>
                 <li>
                     <img src="img/catalog-pict-pink.jpg" width="358" height="576" alt="PINK">
-                    <div>
-                        <h3>Pink</h3>
-                        <span>Продуктовый лендинг<br>приложения для iOS и Android</span> 
-                        <a href="">9 900 ₽</a>
+                    <div class="makets-box">
+                        <h3 class="makets-name">Pink</h3>
+                        <span class="makets-description">Продуктовый лендинг<br>приложения для iOS и Android</span> 
+                        <a href="" class="price-button btn">9 900 ₽</a>
                     </div>
                 </li>    
                 <li>
                     <img src="img/catalog-pict-barber.jpg" width="364" height="582" alt="Barbershop">
-                    <div>
-                        <h3>Barbershop</h3>
-                        <span>Сайт салона красоты.<br>Для мужчин, да.</span> 
-                        <a href="">9 900 ₽</a>
+                    <div class="makets-box">
+                        <h3 class="makets-name">Barbershop</h3>
+                        <span class="makets-description">Сайт салона красоты.<br>Для мужчин, да.</span> 
+                        <a href="" class="price-button btn">9 900 ₽</a>
                     </div>
                 </li>
                 <li>
                     <img src="img/catalog-pict-mishka.jpg" width="362" height="580" alt="MISHKA">
-                    <div>
-                        <h3>Mishka</h3>
-                        <span>Интернет-магазин<br>вязаных игрушек</span> 
-                        <a href="">9 900 ₽</a>
+                    <div class="makets-box">
+                        <h3 class="makets-name">Mishka</h3>
+                        <span class="makets-description">Интернет-магазин<br>вязаных игрушек</span> 
+                        <a href="" class="price-button btn">9 900 ₽</a>
                     </div>
                 </li>
                 <li>
                     <img src="img/catalog-pict-a-plus.jpg" width="364" height="582" alt="A Plus">
-                    <div>
-                        <h3>A Plus</h3>
-                        <span>Лендинг курсов повышения квалификации</span> 
-                        <a href="">9 900 ₽</a>
+                    <div class="makets-box">
+                        <h3 class="makets-name">A Plus</h3>
+                        <span class="makets-description">Лендинг курсов повышения квалификации</span> 
+                        <a href="" class="price-button btn">9 900 ₽</a>
                     </div>
                 </li>
                 <li>
                     <img src="img/catalog-pict-kvast.jpg" width="362" height="580" alt="KVAST">
-                    <div>
-                        <h3>Кваст</h3>
-                        <span>Промо-сайт производителя<br>крафтового кваса</span> 
-                        <a href="">9 900 ₽</a>
+                    <div class="makets-box">
+                        <h3 class="makets-name">Кваст</h3>
+                        <span class="makets-description">Промо-сайт производителя<br>крафтового кваса</span> 
+                        <a href="" class="price-button btn">9 900 ₽</a>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="next-button">
             <div class="next-button-number">
-                <a href="">1</a>
-                <a href="" >2</a>
+                <a href="" class="next-button-selected">1</a>
+                <a href="">2</a>
                 <a href="">3</a>
             </div>
             <a href="" class="next-button-number-next">Следующая</a>
@@ -215,7 +215,7 @@
                 <p class="contact-name">Nёrds design studio</p>
                 <p class="contact-adress">191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8  тел. +7 (812) 275-75-75</p>
             </div>
-            <a href="" class="contact-button">Напишите нам</a>
+            <a href="" class="contact-button btn">Напишите нам</a>
         </section>
         </main>
         <footer>
