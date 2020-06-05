@@ -45,7 +45,13 @@ img {
 	overflow: hidden;
 }
 
-.main-navigation,
+.main-navigation {
+    color: #000000;
+    background-color: var(--basic-background-color);
+    text-transform: uppercase;
+    font-size: 16px;   
+    list-style: none;
+}
 .basket {
     color: #000000;
     background-color: var(--basic-background-color);
@@ -54,13 +60,19 @@ img {
     list-style: none;
 }
 
-.main-navigation a:hover,
+.main-navigation a:hover{
+    color: #FB565A;
+}
+
 .basket:hover {
     color: #FB565A;
-    
 } 
 
-.main-navigation a:active,
+.main-navigation a:active{
+    color: #000000;
+    opacity: 0.3;
+}
+
 .basket:active {
     color: #000000;
     opacity: 0.3;
@@ -102,9 +114,6 @@ img {
     padding-bottom: 16px;
 }
 
-/* не получается приглушить текст конопки при нажатии, 
-    отдельным классов выносила для текста, но мутнеет вся кнопка при нажатии, 
-    и вешать его некуда, на тот же тег, наверное из-за этого и не выходит*/
 
 /* Buttons live*/
 
@@ -115,6 +124,7 @@ img {
 .btn:active{
     background-color: #D7373B;
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    color: #E37376;
 }
 
 .services {
@@ -415,7 +425,7 @@ img {
     opacity: 1;
 }
 
-.next-button a {
+.next-button a{
     display: block;
     background-color: #EEEEEE;
     box-sizing: border-box;
@@ -427,7 +437,7 @@ img {
     color: black;
 }
 
-.next-button-number a {
+.next-button .next-button-number {
     width: 50px;
     height: 50px;
     padding-left: 20px;
@@ -436,7 +446,7 @@ img {
     padding-bottom: 15px;
 }
 
-.next-button-number-next {
+.next-button .next-button-number-next {
     width: 260px;
     height: 50px;
     text-transform: uppercase;
@@ -455,13 +465,9 @@ img {
 .show-button:active {
     background: #D5D5D5;
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-
-    
 }
 
-/* не знаю как оформить и применить активную кнопку, наверное через псевдоклассы, но какие и как?*/
-
-.next-button-selected {
+.next-button .next-button-selected {
     background: rgba(0, 0, 0, 0.0001);
     border: 3px solid #DBDBDB;
     box-sizing: border-box;
