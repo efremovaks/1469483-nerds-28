@@ -8,8 +8,8 @@
     <link href="css/style.css" rel="stylesheet">  
   </head>
   <body>
-    <header>
-      <div>
+    <header class="main-menu">
+      <div class="logo">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
       </div>
       <nav>
@@ -28,8 +28,8 @@
           </li>
         </ul>   
       </nav>
-      <div>
-        <a href="">
+      <div class="basket-container">
+        <a href="" >
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="#A6A6A6"/>
             <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="#A6A6A6"/>
@@ -43,20 +43,26 @@
       <section>
         <ul class="slider">
           <li>
-            <span class="slider-tagline">Долго, дорого, скурпулезно.</span>
-            <p class="slider-text">
-              Математически выверенный дизайн для вашего сайта или мобильного приложения.
-            </p>
-            <a href="" class="slider-button btn">Узнать больше</a>
+            <div class="slider-content">
+              <span class="slider-tagline">Долго, дорого, скурпулезно.</span>
+              <p class="slider-text">
+                Математически выверенный дизайн для вашего сайта или мобильного приложения.
+              </p>
+              <a href="" class="slider-button btn">Узнать больше</a>
+            </div>
+            <div class="slider-img">
+              <img src="img/index-slide1.png" alt="slide1" width="760" height="431">
+            </div>
           </li>
-          <li>
+
+          <li class="visually-hidden">
             <span class="slider-tagline">Любим математику, как никто другой</span>
             <p class="slider-text">
               Никакого кратива, только математические формулы для расчета идеальных пропорций.
             </p>
             <a href="" class="slider-button btn">Узнать больше</a>
           </li>
-          <li>
+          <li class="visually-hidden">
             <span class="slider-tagline">Только ночь, только хардкор</span>
             <p class="slider-text">
               Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
@@ -68,19 +74,19 @@
       <section>
         <h2 class="visually-hidden">сервисы</h2>
         <ul class="services">
-          <li>
+          <li class="services-item">
             <img src="img/index-service-illustration-red.jpg" alt="">
             <h3 class="service-name">Веб-сайты</h3>
             <p class="service-text">Мир никогда не будет прежним после того как увидит наш сайт!</p>
             <a href="" class="red btn" class="service-button">Заказать</a>
           </li>
-          <li>
+          <li class="services-item">
             <img src="img/index-service-illustration-green.jpg" alt="">
             <h3 class="service-name">Приложения</h3>
             <p class="service-text">Покорите топ-10 приложений в AppStore и Google Play</p>
             <a href="" class="green" class="service-button">Заказать</a>
           </li>
-          <li>
+          <li class="services-item">
             <img src="img/index-service-illustration-yell.jpg" alt="">
             <h3 class="service-name">Презентации</h3>
             <p class="service-text">Вы даже не подозреваете, насколько вы изумительны!</p>
@@ -90,19 +96,21 @@
       </section>
       <section>
         <h2 class="visually-hidden">о нас</h2>
-        <div>
+        <div class="about-main">
           <span class="about-tagline">Мы - маленькая, но гордая дизайн-студия из Краснодара.</span>
           <p class="about-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покаладая рук, как роботы.</p>
         </div>
-        <div>
+        <div class="about-items">
           <h3 class="about-orders">Выполняем заказы на разработку:</h3>
           <ul class="about-list">
             <li>Веб-сайтов любой сложности</li>
+            <br>
             <li>Мобильных приложений для iOS и Android</li>
+            <br>
             <li>Слайдшоу и видео для коропоративных презентаций</li>
           </ul>
         </div>
-        <div>
+        <div class="advantage-container">
           <img src="img/index-nerds-logo-about-color.png" alt="Цветной, красивый логопотип Нёрдс">
           <h3 class="advantage-tagline">С 2004 года любим точность во всем:</h3>
           <ul class="advantage">
@@ -146,7 +154,7 @@
           </li>
         </ul>
       </section>
-      <section id="map"> 
+      <section id="map" class="map"> 
         <img src="img/index-map.jpg" width="1440" height="416" alt="Карта, как найти NERDS">
       </section>
       <section>
