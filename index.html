@@ -46,29 +46,45 @@
     <main>
       <section class="promo">
         <div class="container">
-          <ul class="slider-wrapper">
-            <li class="slider-page slider-page-active">
-                <h2 class="slider-tagline">Долго, дорого, скурпулезно.</h2>
+          <div >
+            <ul class="slider-choice">
+              <li class="slider-choice-item">
+                <input class="ellipse" type="radio" id="one-ellipse" name="choice" checked>
+                <label for="one-ellipse"></label>
+              </li>
+              <li class="slider-choice-item">
+                <input class="ellipse" type="radio" id="two-ellipse" name="choice">
+                <label for="two-ellipse"></label>
+              </li>
+              <li class="slider-choice-item">
+                <input class="ellipse" type="radio" id="three-ellipse" name="choice">
+                <label for="three-ellipse"></label>
+              </li>
+            </ul>
+            <ul class="slider-wrapper">
+              <li class="slider-page slider-page-active">
+                  <h2 class="slider-tagline">Долго, дорого, скурпулезно.</h2>
+                  <p class="slider-text">
+                    Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.
+                  </p>
+                  <a href="" class="button btn-learn-more">Узнать больше</a>
+              </li>
+              <li class="slider-page">
+                <h2 class="slider-tagline">Любим математику, как никто другой</h2>
                 <p class="slider-text">
-                  Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.
+                  Никакого кратива, только математические формулы для расчета идеальных пропорций.
                 </p>
                 <a href="" class="button btn-learn-more">Узнать больше</a>
-            </li>
-            <li class="slider-page">
-              <h2 class="slider-tagline">Любим математику, как никто другой</h2>
-              <p class="slider-text">
-                Никакого кратива, только математические формулы для расчета идеальных пропорций.
-              </p>
-              <a href="" class="button btn-learn-more">Узнать больше</a>
-            </li>
-            <li class="slider-page">
-              <h2 class="slider-tagline">Только ночь, только хардкор</h2>
-              <p class="slider-text">
-                Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
-              </p>
-              <a href="" class="button btn-learn-more">Узнать больше</a>
-            </li>
-        </ul>
+              </li>
+              <li class="slider-page">
+                <h2 class="slider-tagline">Только ночь, только хардкор</h2>
+                <p class="slider-text">
+                  Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
+                </p>
+                <a href="" class="button btn-learn-more">Узнать больше</a>
+              </li>
+          </ul>
+        </div>
       </div>
       </section>
       <section class="services">
@@ -105,9 +121,9 @@
                 <p class="about-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покаладая рук, как роботы.</p>
                 <h3 class="about-orders">Выполняем заказы на разработку:</h3>
                 <ul class="about-list">
-                  <li>Веб-сайтов любой сложности <br></li>
-                  <li>Мобильных приложений для iOS и Android <br></li>
-                  <li>Слайдшоу и видео для коропоративных презентаций</li>
+                  <li class="about-list-decorator">Веб-сайтов любой сложности <br></li>
+                  <li class="about-list-decorator">Мобильных приложений для iOS и Android <br></li>
+                  <li class="about-list-decorator">Слайдшоу и видео для коропоративных презентаций</li>
                 </ul>
             </div>
             <div class="about-right">
@@ -232,7 +248,7 @@
           </div>
           <p class="contact-us-text">
             <label for="user-text" class="items-name-modal">Текст письма:</label>
-            <input class="contact-us-field message" id="user-text" type="text" name="Text" placeholder="В свободной форме"></input> 
+            <textarea class="contact-us-field message" id="user-text" type="text" rows="10" name="Text" placeholder="В свободной форме"></textarea> 
           </p>
           <button type="submit" class="button btn-send">Отправить</button>
           </form>

@@ -115,6 +115,11 @@ img {
     margin-right: 48px;
 }
 
+.catalog-active {
+    padding-bottom: 13px;
+    border-bottom: 2px solid #FB565A;
+}
+
 .main-navigation a:hover{
     color: #FB565A;
 }
@@ -125,9 +130,12 @@ img {
 }
 
 .basket-wrapper {
-    padding-top: 27px;
-    margin-bottom: 9px;
+    margin-top: 14px;
+    padding-bottom: 9px;
+    padding-top: 5px;
+    border-top: 8px solid #C4C4C4;
 }
+
 
 .basket {
     color: #000000;
@@ -158,9 +166,60 @@ img {
     background-color: #EEEEEE;
 }
 
+.slider-choice {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 88px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 317px;
+    padding-bottom: 96px;
+    left: 47%;
+}
+
+.slider-choice-item:last-child {
+    padding-right: 0;
+}
+
+.slider-choice label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.ellipse {
+    display: none;
+}
+
+.ellipse + label::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background-image: url(../img/catalog-Ellipse.svg);
+    background-repeat: no-repeat;
+}
+
+.ellipse:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background-image: url(../img/catalog-Ellipse-active.svg);
+    background-repeat: no-repeat;
+    top: 5px;
+    left: 5px;
+}
+
 .slider-wrapper {   
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 80px;
     padding: 0;
 }
 
@@ -218,9 +277,15 @@ img {
 .services-wrapper {
     display: flex;
     list-style: none;
-    margin: 0;
-    margin-top: 80px;
+    margin: 0 auto;
+    margin-bottom: 73px;
     padding: 0;
+    padding-bottom: 80px;
+
+    border: 2px solid #EEEEEE;
+    border-top: none;
+    border-left: none;
+    border-right: none;   
 }
 
 .services-item {
@@ -238,6 +303,9 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     color: #000000;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 16px;
 }
 
 .service-text {
@@ -245,7 +313,7 @@ img {
     line-height: 24px;
     color: #283136;
     width: 260px;
-    padding-top: 16px;
+    margin: 0;
     padding-bottom: 49px;
 }
 
@@ -315,7 +383,6 @@ img {
 .btn-write-us {
     width: 219px;
     margin-bottom: 47px;
-    margin-top: 37px;
 }
 
 .btn-send {
@@ -353,9 +420,8 @@ img {
 .about-wrapper {
     display: grid;
     grid-template-columns: 1fr 360px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    margin-top: 155px;
 }
 
 .about-left {
@@ -374,6 +440,7 @@ img {
     width: 651px;
     margin: 0;
     padding: 0;
+    padding-bottom: 32px;
 }
 
 .about-text {
@@ -383,8 +450,8 @@ img {
     color: #283136;
     width: 646px;
     margin: 0;
-    margin-top: 32px;
     padding: 0;
+    padding-bottom: 40px;
 }
 
 .about-orders {    
@@ -395,12 +462,12 @@ img {
     color: #283136;
     width: 306px;
     margin: 0;
-    margin-top: 40px;
-    margin-bottom: 23px;
     padding: 0;
+    padding-bottom: 23px;
 }
 
 .about-list {
+    position: relative;
     font-size: 16px;
     line-height: 24px;
     font-weight: normal;
@@ -408,6 +475,21 @@ img {
     width: 399px;
     margin: 0;
     padding: 0;
+}
+
+.about-list-decorator {
+    padding-bottom: 35px;
+    padding-left: 32px;
+}
+
+.about-list li::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #FB565A;
+    left: 3px;
+
 }
 
 .about-right {
@@ -422,6 +504,7 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-top: 31px;
 }
 
 .advantage-items {
@@ -442,9 +525,8 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
-    margin-top: 37px;
-    margin-bottom: 31px;
     padding: 0;
+    padding-top: 37px;
 }
 
 .advantage-rate {
@@ -488,12 +570,26 @@ img {
     display: flex;
     justify-content: space-between;
     list-style: none;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding: 0;
+
+    border: 2px solid #EEEEEE;
+    border-left: none;
+    border-right: none;   
+}
+
+.clients:last-child {
+    padding-top: 52px;
+    padding-bottom: 44px;
 }
 
 
 .clients-condition {
     opacity: 0.2;
 }
+
+
 
 .clients-condition:hover {
     opacity: 1;
@@ -503,7 +599,7 @@ img {
     opacity: 0.1;
 }
 
-/* main client*/
+/* map*/
 
 .map {
     background-image: url(../img/index-map.jpg);
@@ -530,7 +626,6 @@ img {
     height: 308px;
     background: #FFFFFF;
     margin-top: 54px;
-
 }
 
 .studio-name {
@@ -539,11 +634,9 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     width: 193px;
-    margin: 0;
-    margin-bottom: 23px;
-    margin-top: 49px;
+    margin: 0;   
     padding: 0;
-
+    padding-top: 49px;
 }
 
 .studio-adress {
@@ -552,8 +645,9 @@ img {
     color: #666666;
     margin: 0;
     padding: 0;
+    padding-top: 23px;
+    padding-bottom: 37px;
 }
-
 
 .marker {
     display: block;
@@ -565,6 +659,7 @@ img {
     padding-top: 170px;
     padding-left: 115px;
 }
+
 
 /* social */
 
@@ -641,8 +736,8 @@ img {
     line-height: 36px;
     font-weight: bold;
     margin: 0;
-    margin-bottom: 10px;
     padding: 0;
+    padding-bottom: 10px;
 }
 
 .get-friends-text {
@@ -650,8 +745,8 @@ img {
     line-height: 22px;
     color: #444444;
     margin: 0;
-    margin-bottom: 74px;
     padding: 0;
+    padding-bottom: 74px;
 }
 
 .friendship-items {
@@ -663,7 +758,6 @@ img {
 
 
 /* Catalog */
-
 
 .shop-description {
     text-align: center;
@@ -690,19 +784,19 @@ img {
 
 .sorting-wrapper {
     display: flex;
-    margin-bottom: 48px;
-}
-.sorting-wrapper .filter-name {
     margin-top: 55px;
+    margin-bottom: 48px;
+    padding-top: 18px;
+    border-top: 8px solid #C4C4C4;
 }
 
 .sorting {
     display: flex;
     list-style: none;
     margin: 0;
-    margin-top: 61px;
     margin-left: 266px;
     padding: 0;
+    padding-top: 5px;
 }
 
 .sorting-item {    
@@ -750,12 +844,32 @@ img {
 }
 
 .makets-items {
+    position: relative;
+    flex-grow: 1;
+    width: 358px;
     margin: 0px;
-    margin-bottom: 30px;
     padding: 0px;
+    padding-top: 40px;
+    padding-right: 42px;
+    padding-bottom: 30px;
+}
+
+.makets-items:first-child{
+    width: 360px;
+}
+
+.makets-items:nth-child(2n) {
+    padding-right: 0;
+}
+
+.hat{
+    background-image: url(../img/catalog-makets-hat-active.svg);
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 .makets-name {
+    display: block;
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
@@ -777,11 +891,13 @@ img {
 
 .makets-box {
     /*display: none;*/
+    position: absolute;
+    top: 400px;
     box-sizing: border-box;
     text-align: center;
-    width: 360px;
     height: 231px;
     background-color: #EEEEEE;
+    width: inherit;
 }
 
 
@@ -890,8 +1006,8 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
-    margin-bottom: 13px;
     padding: 0;
+    padding-bottom: 13px;
 }
 
 
@@ -924,7 +1040,6 @@ img {
     display: none;
 }
 
-/* не получается правильно сделать чекбоксы, а как цвет менять при наведении вообще не представляю */
 
 /* radio */
 .filter-points-item-radio + label::before {
@@ -934,20 +1049,24 @@ img {
     top: -3px;
     width: 25px;
     height: 25px;
-    border: solid #b8b8b8;
-    border-radius: 50%;
+    background-image: url(../img/catalog-radio-off.svg);
+    background-repeat: no-repeat;
+}
+
+.filter-points-item-radio:checked + label::before {
+    display: none;
 }
 
 .filter-points-item-radio:checked + label::after {
     content: "";
     position: absolute;
-    left: -23.5px;
-    top: 3px;
-    width: 9px;
-    height: 9px;
-    border: 6px solid #b8b8b8;
-    border-radius: 50%;
+    left: -30px;
+    top: -3px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/catalog-radio-on.svg);
 }
+
 /*checkbox*/
 .filter-points-item-checkbox + label::before {
     content: "";
@@ -957,6 +1076,11 @@ img {
     width: 23px;
     height: 23px;
     background-image: url(../img/catalog-checkbox-off.svg);
+    background-repeat: no-repeat;
+}
+
+.filter-points-item-checkbox:checked + label::before {
+    display:none;
 }
 
 .filter-points-item-checkbox:checked + label::after {
@@ -1101,12 +1225,11 @@ img {
     border: 2px solid #d7dcde;
     background-color: transparent;
     width: 360px;
-    height: 50px;
+    min-height: 50px;
 }
 
-.contact-us-text .contact-us-field {
+.message {
     width: 760px;
-    min-height: 118px;
 }
 
 .contact-us-text input::placeholder {
