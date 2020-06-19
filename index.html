@@ -20,7 +20,7 @@
                 <a href="">Студия</a>
               </li>
               <li class="main-navigation-item">
-                <a href="blank.html">Клиенты</a>
+                <a href="">Клиенты</a>
               </li>
               <li class="main-navigation-item">
                 <a href="catalog.html">Магазин</a>
@@ -151,45 +151,43 @@
         <div class="container">
           <h2 class="visually-hidden">Клиенты</h2>
           <ul class="clients">
-            <li class="clients-condition">
+            <li class="line">
               <a href="https://htmlacademy.ru/intensive/htmlcss">
-                <img src="img/index-clients-html-academy.svg" width="199" height="68" alt="Лого html Academy">
+                <img class="clients-condition" src="img/index-clients-html-academy.svg" width="199" height="68" alt="Лого html Academy">
               </a>
             </li>
-            <li class="clients-condition">
+            <li class="line">
               <a href="">
-                <img src="img/index-clients-barbershop.svg" width="209" height="90" alt="Лого Barbershop">
+                <img class="clients-condition" src="img/index-clients-barbershop.svg" width="209" height="90" alt="Лого Barbershop">
               </a>
             </li>
-            <li class="clients-condition">
+            <li class="line">
               <a href="">
-                <img src="img/index-clients-pink.svg" width="185" height="52" alt="Лого PINK">
+                <img class="clients-condition" src="img/index-clients-pink.svg" width="185" height="52" alt="Лого PINK">
               </a>
             </li>
-            <li class="clients-condition">
+            <li >
               <a href="">
-                <img src="img/index-clients-mishka.svg" width="173" height="84" alt="Лого Mishka">
+                <img class="clients-condition" src="img/index-clients-mishka.svg" width="173" height="84" alt="Лого Mishka">
               </a>
             </li>
           </ul>
         </div>
       </section>
       <section class="map">
-        <div class="container">
           <h2 class="visually-hidden" id="map">карта</h2>
-          <div class="map-items-wrapper">
-            <h2 class="visually-hidden">Контакты</h2>
-            <div class="studio-adress-wrapper">
-              <p class="studio-name">Nёrds design studio</p>
-              <p class="studio-adress">191186, Санкт-Петербург,<br>  ул. Б. Конюшенная, д. 19/8<br><br>  тел. +7 (812) 275-75-75</p>
-              <a href="" class="button btn-write-us">Напишите нам</a>
+          <div class="container">
+            <div class="map-items-wrapper">
+              <h2 class="visually-hidden">Контакты</h2>
+              <div class="studio-adress-wrapper">
+                <p class="studio-name">Nёrds design studio</p>
+                <p class="studio-adress">191186, Санкт-Петербург,<br>  ул. Б. Конюшенная, д. 19/8<br><br>  тел. +7 (812) 275-75-75</p>
+                <a href="" class="button btn-write-us">Напишите нам</a>
+              </div>
             </div>
-            <div class="marker">
-                <img class="marker-img" src="img/index-map-marker.png" alt="Маркер Nёrds" width="231" height="190">
-            </div>
+            <img class="marker-img" src="img/index-map-marker.png" alt="Маркер Nёrds" width="231" height="190">
           </div>
-        </div>
-    </section>
+        </section>
     </main>
     <footer>
       <section class="footer">
@@ -233,8 +231,10 @@
     </footer>
     <section class="modal modal-box">
       <div class="modal-wrapper">
-        <h2 class="modal-name">Напишите нам</h2>
-        <button class="btn-close" type="button" name="Закрыть"></button>
+        <div class="modal-header">
+          <h2 class="modal-name">Напишите нам</h2>
+          <button class="btn-close" type="button" name="Закрыть"></button>
+        </div>
         <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="contact-us-data">
             <p class="contact-us">
@@ -248,7 +248,7 @@
           </div>
           <p class="contact-us-text">
             <label for="user-text" class="items-name-modal">Текст письма:</label>
-            <textarea class="contact-us-field message" id="user-text" type="text" rows="10" name="Text" placeholder="В свободной форме"></textarea> 
+            <textarea class="contact-us-field message" id="user-text" rows="5" name="Text" placeholder="В свободной форме"></textarea> 
           </p>
           <button type="submit" class="button btn-send">Отправить</button>
           </form>
