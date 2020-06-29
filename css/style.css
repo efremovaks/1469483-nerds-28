@@ -91,11 +91,10 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;  
-
     list-style: none;
-    padding-top: 27px;
+    margin-top: 27px;
     padding-bottom: 9px;
-    padding-left: 8px;
+    padding-left: 5px;
 }
 
 .main-navigation {  
@@ -124,7 +123,9 @@ img {
     border-bottom: 2px solid #FB565A;
 }
 
-.main-navigation a:hover{
+.main-navigation a:hover,
+.main-navigation a:focus {
+    outline: none;
     color: #FB565A;
 }
 
@@ -133,12 +134,10 @@ img {
     opacity: 0.3;
 }
 
-.basket-wrapper {
-    margin-top: 18px;
-    padding-top: 9px;
-}
 
 .basket {
+    position: relative;
+    outline: none;
     color: #000000;
     text-transform: uppercase;
     font-style: normal;
@@ -147,10 +146,25 @@ img {
     line-height: 30px;   
     list-style: none;
     width: 115px;
-    padding-left: 23px;
+    padding-left: 40px;
+    margin-top: 26px;
 }
 
-.basket:hover {
+.basket::before {
+    position: absolute;
+    content: "";
+    background: url(../img/ico/cart-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 15px;
+    height: 15px;
+    top: 7px;
+    left: 0;
+}
+
+.basket:hover,
+.basket:focus {
+    
     color: #FB565A;
 } 
 
@@ -340,6 +354,7 @@ img {
 .button {
     display: block;
     box-sizing: border-box;
+    outline: none;
     background-color: #FB565A;
     border-style: solid;
     border: none;
@@ -354,7 +369,8 @@ img {
     padding-bottom: 15px;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
     background-color: #E74246;
 }
 
@@ -633,31 +649,54 @@ img {
 /* map*/
 
 .map {
-    background: 
-        url(../img/index-map-marker.png) no-repeat 1055px 86px,
-        url(../img/index-map.jpg) no-repeat 50% 50%;
-    margin: 0;
-    margin-bottom: 55px;
-    padding: 0;    
+    width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 49px;
 }
 
+.map-wrapper {
+    position: relative;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    z-index: 3;
+    border: none;
+}
+
+.map-marker {
+    position: absolute;
+    z-index: 2;
+    left: 822px;
+    top: 86px;
+}
 
 .map-items-wrapper {
-    padding-top: 54px;
-    padding-bottom: 54px;
+    position: absolute;
+    z-index: 5;
+    width: 319px;
+    height: 308px;
+    left: 140px;
+    right: 0;
+    top: 57px;
+    bottom: 0;
 }
 
 .studio-adress-box {   
-    width: 319px;
-    height: 308px;
     background: #FFFFFF;
-    margin: 0;
 }
 
 .studio-adress-content {
     width: 230px;
-    margin: 0 auto;
-    padding-left: 7px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 49px;
+    padding-bottom: 47px;    
 }
 
 .studio-name {
@@ -666,8 +705,6 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
-    padding: 0;
-    padding-top: 50px;
     padding-bottom: 22px;
 }
 
@@ -819,7 +856,7 @@ img {
 .sorting-wrapper {
     display: flex;
     width: 760px;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
     padding-top: 22px;
 }
 
@@ -934,6 +971,7 @@ img {
 }
 
 .makets-description {
+    max-height: 70px;
     font-weight: normal;
     font-size: 16px;
     line-height: 18px;
@@ -1114,7 +1152,6 @@ img {
     padding-left: 6px;
 }
 
-
 .filter-points-item-radio,
 .filter-points-item-checkbox {
     display: none;
@@ -1150,10 +1187,11 @@ img {
     opacity: 0.3;
 }
 
-.filter-points-item-radio + label::after:hover,
-.filter-points-item-radio + label::before:hover {
+.filter-points-item-radio + label:hover::after,
+.filter-points-item-radio + label:hover::before {
     opacity: 1;
 }
+
 
 
 /*checkbox*/
@@ -1193,6 +1231,10 @@ img {
     opacity: 0.3;
 }
 
+.filter-points-item-checkbox + label:hover::before, 
+.filter-points-item-checkbox + label:hover::after {
+    opacity: 1;
+}
 
 /* Catalog-button */
 
@@ -1216,6 +1258,7 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
+    outline: none;
     border: none;
     border-radius: 3px;
     background-color: #EEEEEE;
@@ -1224,9 +1267,11 @@ img {
     padding-bottom: 15px;
 }
 
-.button-grey:hover {
+.button-grey:hover,
+.button-grey:focus {
     background-color: #dfdfdf;
 }
+
 
 .button-grey:active {
     background-color: #D5D5D5;
@@ -1292,6 +1337,7 @@ img {
 .modal-show {
     display: block;
     animation: bounce 0.6s;
+    z-index: 6;
 }
 
 .modal-header {

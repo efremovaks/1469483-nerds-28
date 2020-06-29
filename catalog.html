@@ -30,16 +30,7 @@
                 </li>
               </ul>
             </nav>
-            <div class="basket-wrapper">
-              <a href="" >
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="#A6A6A6"/>
-                  <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="#A6A6A6"/>
-                  <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="#A6A6A6"/>
-                </svg>
-                <span class="basket">Корзина</span>
-              </a>
-            </div>
+            <a class="basket" href="">Корзина</a>
           </div>
           <H1 class="shop-description">Магазин готовых шаблонов</H1>
       </div>  
@@ -83,7 +74,7 @@
                                     </li>
                                     <li class="filter-points-item">
                                         <input class="filter-points-item-radio" type="radio" name="grid" id="filter_rubber" value="rubber">
-                                        <label for="filter_rubber">Резиновая</label>
+                                        <label for="filter_rubber" tabindex="0">Резиновая</label>
                                     </li>
                                 </ul>
                             </fieldset>   
@@ -223,13 +214,19 @@
         </section>
         <section class="map">
             <h2 class="visually-hidden" id="map">карта</h2>
-            <div class="container">
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.3051956263197!2d30.32174586154978!3d59.93888161572121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1593434226840!5m2!1sru!2sru" width="1440" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <img src="img/index-map.jpg" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7 (812)
+              275-75-75" width="1440" height="416">
+              <div class="map-marker">
+                <img src="img/index-map-marker.png" alt="">
+              </div>
               <div class="map-items-wrapper">
                 <h2 class="visually-hidden">Контакты</h2>
                 <div class="studio-adress-box">
                   <div class="studio-adress-content">
                     <p class="studio-name">Nёrds design studio</p>
-                    <p class="studio-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8<br><br>тел. +7 (812)
+                    <p class="studio-adress">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br><br>тел. +7 (812)
                       275-75-75</p>
                     <a href="" class="button btn-write-us">Напишите нам</a>
                   </div>
