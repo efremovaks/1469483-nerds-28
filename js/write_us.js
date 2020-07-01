@@ -1,3 +1,4 @@
+/* MODAL window */
 var writeUs = document.querySelector(".btn-write-us");
 var modalPopup = document.querySelector(".modal");
 var modalClose = modalPopup.querySelector(".btn-close");
@@ -49,3 +50,30 @@ window.addEventListener("keydown", function (evt) {
       }
     }
   });
+
+  
+
+/* SLIDER */  
+
+var slides = document.querySelectorAll('.slider-page');
+var dot = document.querySelectorAll('.slider-choice-item');
+
+dot[0].onclick = function () {
+  slides[1].classList.remove('slider-page-active');
+  slides[2].classList.remove('slider-page-active');
+  slides[0].classList.add('slider-page-active');
+};
+
+
+dot[1].onclick = function () {
+  slides[0].classList.remove('slider-page-active');
+  slides[2].classList.remove('slider-page-active');
+  slides[1].classList.add('slider-page-active');
+};
+
+dot[2].onclick = function () {
+  slides[0].classList.remove('slider-page-active');
+  slides[1].classList.remove('slider-page-active');
+  slides[2].classList.add('slider-page-active');
+};
+

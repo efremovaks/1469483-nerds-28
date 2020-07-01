@@ -185,7 +185,7 @@ img {
     background-color: #EEEEEE;
 }
 
-.promo-wripper {
+.promo-wrapper {
     position: relative;
 }
 
@@ -255,7 +255,7 @@ img {
 
 .slider-page {
     display: none;
-    padding-top: 79px;
+    padding-top: 78px;
     padding-bottom: 80px;
 }
 
@@ -553,7 +553,7 @@ img {
 }
 
 .advantage-items .advantage-text:last-child {
-    margin-top: 11px;
+    margin-top: 12px;
 }
 
 .advantage-tagline {  
@@ -673,7 +673,7 @@ img {
     position: absolute;
     z-index: 2;
     left: 822px;
-    top: 86px;
+    top: 87px;
 }
 
 .map-items-wrapper {
@@ -972,6 +972,7 @@ img {
 
 .makets-description {
     max-height: 70px;
+    overflow: hidden;
     font-weight: normal;
     font-size: 16px;
     line-height: 18px;
@@ -1152,11 +1153,6 @@ img {
     padding-left: 6px;
 }
 
-.filter-points-item-radio,
-.filter-points-item-checkbox {
-    display: none;
-}
-
 
 /* radio */
 .filter-points-item-radio + label::before {
@@ -1188,11 +1184,11 @@ img {
 }
 
 .filter-points-item-radio + label:hover::after,
-.filter-points-item-radio + label:hover::before {
+.filter-points-item-radio + label:hover::before,
+.filter-points-item-radio:focus + label::after,
+.filter-points-item-radio:focus + label::before  {
     opacity: 1;
 }
-
-
 
 /*checkbox*/
 
@@ -1232,9 +1228,12 @@ img {
 }
 
 .filter-points-item-checkbox + label:hover::before, 
-.filter-points-item-checkbox + label:hover::after {
+.filter-points-item-checkbox + label:hover::after,
+.filter-points-item-checkbox:focus + label::before,
+.filter-points-item-checkbox:focus + label::after  {
     opacity: 1;
 }
+
 
 /* Catalog-button */
 
