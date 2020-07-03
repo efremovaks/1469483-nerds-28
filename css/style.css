@@ -233,7 +233,7 @@ img {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    background-image: url(../img/catalog-Ellipse.svg);
+    background-image: url(../img/catalog-ellipse.svg);
     background-repeat: no-repeat;
 }
 
@@ -243,7 +243,7 @@ img {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    background-image: url(../img/catalog-Ellipse-active.svg);
+    background-image: url(../img/catalog-ellipse-active.svg);
     background-repeat: no-repeat;
     top: 5px;
     left: 5px;
