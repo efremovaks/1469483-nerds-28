@@ -17,11 +17,12 @@ html {
     height: 100%;
 }
 
+
 body {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     min-width: 1160px;
     min-height: 100%;
     font-size: 16px;
@@ -32,6 +33,7 @@ body {
     padding: 0;
     margin: 0;
 }
+
 
 .visually-hidden {
 	position: absolute;
@@ -312,6 +314,7 @@ img {
 
 .services-wrapper {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -604,7 +607,8 @@ img {
 }
 
 .clients-list {
-    display: flex;    
+    display: flex;   
+    flex-wrap: wrap; 
     list-style: none;
     margin: 0 auto;
     margin-bottom: 80px;
@@ -968,7 +972,7 @@ img {
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
-    margin: 0px;
+    margin: 0 auto;
     margin-bottom: 12px;
     padding: 0px;
     padding-top: 26px;
@@ -980,14 +984,12 @@ img {
     font-weight: normal;
     font-size: 16px;
     line-height: 18px;
-    margin-top: 0px;
-    margin-bottom: 32px;
-    margin-left: 52px;
-    margin-right: 53px;
+    margin: 0 auto;
 }
 
 .makets-box {
     display: none;
+    overflow: auto;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -1062,14 +1064,18 @@ img {
 }
 
 .range-controls .switch {
+    
     position: absolute;
     top: 31px;
     padding: 0;
     border: 10px solid #ffffff;
-    background-color: #ababab;
+    background: #ababab;
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 #cfcfcf;
     cursor: pointer;
+    width: 4px;
+    height: 4px;
+    
 }
 
 .cost {
@@ -1243,6 +1249,7 @@ img {
 .btn-price {
     width: 200px;
     margin: 0 auto;
+    margin-top: 32px;
     margin-bottom: 44px;
 }
 
