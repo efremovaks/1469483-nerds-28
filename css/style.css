@@ -1,10 +1,10 @@
 :root {
---basic-text-color: #283136;
---basic-background-color: #ffffff;
---basic-header-color:  #EEEEEE;
---basic-main-menu-color: #000000;
---basic-buttons: #FB565A;
---basic-buttons-color: #ffffff;
+    --basic-text-color: #283136;
+    --basic-background-color: #ffffff;
+    --basic-header-color:  #EEEEEE;
+    --basic-main-menu-color: #000000;
+    --basic-buttons: #FB565A;
+    --basic-buttons-color: #ffffff;
 }
 
 *, *::before, *::after {
@@ -318,7 +318,7 @@ img {
     list-style: none;
     margin: 0 auto;
     padding: 0;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 
     border: 2px solid #EEEEEE;
     border-top: none;
@@ -392,6 +392,7 @@ img {
 
 .btn-services {
     width: 160px;
+    margin-bottom: 20px;
 }
 
 .btn-services-green {
@@ -805,6 +806,7 @@ img {
     display: flex;
     flex-direction: row-reverse;
     width: 1060px;
+    margin: 0 auto;
     
 }
 
@@ -813,8 +815,6 @@ img {
     line-height: 36px;
     font-weight: bold;
     margin: 0;
-    padding: 0;
-    padding-top: 20px;
     padding-bottom: 10px;
 }
 
@@ -828,12 +828,10 @@ img {
 
 .friendship-items-right {
     margin-right: auto;
-    padding-left: 20px;
 }
 
 .friendship-items-left {
     margin-right: auto;
-    padding-top: 14px;
 }
 
 
@@ -984,6 +982,15 @@ img {
     padding-top: 26px;
 }
 
+.makets-name:hover {
+    color: #FB565A;
+}
+
+.makets-name:active {
+    color: #b3b3b3;
+}
+
+
 .makets-description {
     height: 37px;
     overflow: auto;
@@ -1015,13 +1022,6 @@ img {
     width: 360px;
 }
 
-.makets-box a:hover {
-    color: #FB565A;
-}
-
-.makets-box a:active {
-    color: #b3b3b3;
-}
 
 /* catalog left */
 
@@ -1259,15 +1259,6 @@ img {
     margin-bottom: 44px;
 }
 
-/* кнопка ведет себя странно, при наведении и нажатии - цвет текста не такой как прописан стилями,
-прины такого поведения не смогла найт, вылечила с помощью !important  */
-.btn-price:hover {
-    color: #ffffff !important;
-}
-
-.btn-price:active {
-    color:#E37376 !important;
-}
 
 .button-grey {
     display: block;
@@ -1432,6 +1423,11 @@ img {
     padding-left: 16px;
 }
 
+.contact-us-field:invalid {
+    color: #e74246;
+    border-color: #e74246;
+}
+
 .contact-us-field:hover{
     border-color: #b4b9bb;
     color: #a1a1a1;
@@ -1442,10 +1438,7 @@ img {
     color: #000000;
 }
 
-.contact-us-field:invalid {
-    color: #e74246;
-    border-color: #e74246;
-}
+
 
 /* Animations */
 

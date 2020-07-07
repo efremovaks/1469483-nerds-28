@@ -5,7 +5,7 @@
     <title>Нёрдс-Магазин. HTML Academy</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"> 
+    <link href="css/style-mini.css" rel="stylesheet"> 
   </head>
   <body>
     <header class="header">
@@ -280,23 +280,23 @@
             <div class="contact-us-data">
               <p class="contact-us">
                 <label for="user-name" class="items-name-modal">Ваше имя:</label>
-                <input class="contact-us-field name" id="user-name" type="text" name="Name" placeholder="Имя Фамилия">
+                <input class="contact-us-field name" id="user-name" type="text" name="Name" placeholder="Имя Фамилия" required>
               </p>
               <p class="contact-us contact-us-email">
                 <label for="user-email" class="items-name-modal">Ваш email:</label>
-                <input class="contact-us-field email" id="user-email" type="email" name="Email" placeholder="email@example.com">
+                <input class="contact-us-field email" id="user-email" type="email" name="Email" placeholder="email@example.com" required>
               </p>
             </div>
             <p class="contact-us-text">
               <label for="user-text" class="items-name-modal">Текст письма:</label>
-              <textarea class="contact-us-field message" id="user-text" rows="6" name="Text" placeholder="В свободной форме"></textarea> 
+              <textarea class="contact-us-field message" id="user-text" rows="6" name="Text" placeholder="В свободной форме" required></textarea> 
             </p>
             <button type="submit" class="button btn-send">Отправить</button>
             </form>
         </div>
     </section>
   
-    <script src="js/write_us.js"></script>
+    <script src="js/write_us_mini.js"></script>
     </body>
   </html>
   
