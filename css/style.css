@@ -656,39 +656,45 @@ img {
 /* map*/
 
 .map {
-    width: 1440px;
-    margin: 0 auto;
-    margin-bottom: 49px;
+    position: relative;
+    margin-bottom: 68px;
 }
 
+
+.map-map {
+    width: 100%;
+    height: 416px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+
 .map-wrapper {
-    position: relative;
+    position: absolute;
+    width: 1160px;
+    height: 0;
+    margin: 0 auto;
     left:0;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
 }
 
-.map-wrapper iframe {
-    position: absolute;
-    z-index: 3;
-    border: none;
-}
 
 .map-marker {
     position: absolute;
     z-index: 2;
-    left: 822px;
-    top: 87px;
+    left: 50%;
+    transform: translateX(40%);
+    top: 18%;
 }
 
 .map-items-wrapper {
     position: absolute;
-    z-index: 5;
     width: 319px;
     height: 308px;
-    left: 140px;
+    left: 0;
     right: 0;
     top: 57px;
     bottom: 0;
